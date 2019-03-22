@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<local-project language="java" associate="file:/C:/structure101-repository/maven" version="5.0.14380" xml-version="3" flavor="j2se">
+  <property name="show-as-module" value="false" />
+  <property name="publish-architecture-artifacts" value="true" />
+  <property name="force-classpath" value="false" />
+  <property name="root-file" value="structure101-settings.java.hsw" />
+  <property name="project-type" value="s101_workspace" />
+  <property name="hide-externals" value="true" />
+  <property name="parse-archive-in-archive" value="false" />
+  <property name="include-injected-dependency" value="false" />
+  <property name="relative-to" value="const(THIS_FILE)" />
+  <property name="action-set-mod" value="1" />
+  <property name="detail-mode" value="true" />
+  <property name="hide-deprecated" value="false" />
+  <property name="resolve-name-clashes" value="true" />
+  <property name="project-excluded" />
+  <property name="show-needs-to-compile" value="false" />
+  <classpath>
+    <classpathentry kind="lib" path="maven-builder-support/target/classes" module="maven-builder-support" />
+    <classpathentry kind="lib" path="maven-resolver-provider/target/classes" module="maven-resolver-provider" />
+    <classpathentry kind="lib" path="maven-model-builder/target/classes" module="maven-model-builder" />
+    <classpathentry kind="lib" path="maven-core/target/classes" module="maven-core" />
+    <classpathentry kind="lib" path="maven-slf4j-provider/target/classes" module="maven-slf4j-provider" />
+    <classpathentry kind="lib" path="maven-model/target/classes" module="maven-model" />
+    <classpathentry kind="lib" path="maven-repository-metadata/target/classes" module="maven-repository-metadata" />
+    <classpathentry kind="lib" path="maven-compat/target/classes" module="maven-compat" />
+    <classpathentry kind="lib" path="maven-plugin-api/target/classes" module="maven-plugin-api" />
+    <classpathentry kind="lib" path="maven-embedder/target/classes" module="maven-embedder" />
+    <classpathentry kind="lib" path="maven-settings/target/classes" module="maven-settings" />
+    <classpathentry kind="lib" path="maven-settings-builder/target/classes" module="maven-settings-builder" />
+    <classpathentry kind="lib" path="maven-artifact/target/classes" module="maven-artifact" />
+  </classpath>
+  <pom-root-files />
+  <modules>
+    <module name="maven" kind="ide-project" />
+    <module name="maven-slf4j-provider" kind="ide-project" />
+    <module name="maven-settings" kind="ide-project" />
+    <module name="maven-repository-metadata" kind="ide-project" />
+    <module name="maven-model" kind="ide-project" />
+    <module name="maven-builder-support" kind="ide-project" />
+    <module name="maven-artifact" kind="ide-project" />
+    <module name="maven-settings-builder" kind="ide-project">
+      <requires name="maven-builder-support" kind="ide-project" />
+      <requires name="maven-settings" kind="ide-project" />
+    </module>
+    <module name="maven-plugin-api" kind="ide-project">
+      <requires name="maven-model" kind="ide-project" />
+      <requires name="maven-artifact" kind="ide-project" />
+    </module>
+    <module name="maven-model-builder" kind="ide-project">
+      <requires name="maven-model" kind="ide-project" />
+      <requires name="maven-artifact" kind="ide-project" />
+      <requires name="maven-builder-support" kind="ide-project" />
+    </module>
+    <module name="maven-resolver-provider" kind="ide-project">
+      <requires name="maven-model" kind="ide-project" />
+      <requires name="maven-model-builder" kind="ide-project" />
+      <requires name="maven-artifact" kind="ide-project" />
+      <requires name="maven-builder-support" kind="ide-project" />
+      <requires name="maven-repository-metadata" kind="ide-project" />
+    </module>
+    <module name="maven-core" kind="ide-project">
+      <requires name="maven-model" kind="ide-project" />
+      <requires name="maven-settings" kind="ide-project" />
+      <requires name="maven-settings-builder" kind="ide-project" />
+      <requires name="maven-builder-support" kind="ide-project" />
+      <requires name="maven-repository-metadata" kind="ide-project" />
+      <requires name="maven-artifact" kind="ide-project" />
+      <requires name="maven-plugin-api" kind="ide-project" />
+      <requires name="maven-model-builder" kind="ide-project" />
+      <requires name="maven-resolver-provider" kind="ide-project" />
+    </module>
+    <module name="maven-embedder" kind="ide-project">
+      <requires name="maven-settings" kind="ide-project" />
+      <requires name="maven-settings-builder" kind="ide-project" />
+      <requires name="maven-core" kind="ide-project" />
+      <requires name="maven-repository-metadata" kind="ide-project" />
+      <requires name="maven-artifact" kind="ide-project" />
+      <requires name="maven-resolver-provider" kind="ide-project" />
+      <requires name="maven-plugin-api" kind="ide-project" />
+      <requires name="maven-model" kind="ide-project" />
+      <requires name="maven-model-builder" kind="ide-project" />
+      <requires name="maven-builder-support" kind="ide-project" />
+    </module>
+    <module name="maven-compat" kind="ide-project">
+      <requires name="maven-model" kind="ide-project" />
+      <requires name="maven-model-builder" kind="ide-project" />
+      <requires name="maven-builder-support" kind="ide-project" />
+      <requires name="maven-settings" kind="ide-project" />
+      <requires name="maven-settings-builder" kind="ide-project" />
+      <requires name="maven-artifact" kind="ide-project" />
+      <requires name="maven-core" kind="ide-project" />
+      <requires name="maven-plugin-api" kind="ide-project" />
+      <requires name="maven-resolver-provider" kind="ide-project" />
+      <requires name="maven-repository-metadata" kind="ide-project" />
+    </module>
+    <module name="apache-maven" kind="ide-project">
+      <requires name="maven-embedder" kind="ide-project" />
+      <requires name="maven-settings" kind="ide-project" />
+      <requires name="maven-settings-builder" kind="ide-project" />
+      <requires name="maven-plugin-api" kind="ide-project" />
+      <requires name="maven-model" kind="ide-project" />
+      <requires name="maven-model-builder" kind="ide-project" />
+      <requires name="maven-builder-support" kind="ide-project" />
+      <requires name="maven-core" kind="ide-project" />
+      <requires name="maven-repository-metadata" kind="ide-project" />
+      <requires name="maven-artifact" kind="ide-project" />
+      <requires name="maven-resolver-provider" kind="ide-project" />
+      <requires name="maven-compat" kind="ide-project" />
+      <requires name="maven-slf4j-provider" kind="ide-project" />
+    </module>
+  </modules>
+  <modules-in-scope />
+  <restructuring>
+    <set version="3" name="Class split example" hiview="Codemap" active="true" todo="true" list="0">
+      <refactorings>
+        <entry description="Add maven-core.org.apache.maven.project.ClasspathElements" />
+        <entry description="Move maven-core.org.apache.maven.project.MavenProject.getRuntimeClasspathElements():java.util.List to maven-core.org.apache.maven.project.ClasspathElements.getRuntimeClasspathElements():java.util.List" />
+        <entry description="Move maven-core.org.apache.maven.project.MavenProject.getSystemClasspathElements():java.util.List to maven-core.org.apache.maven.project.ClasspathElements.getSystemClasspathElements():java.util.List" />
+        <entry description="Move maven-core.org.apache.maven.project.MavenProject.getCompileClasspathElements():java.util.List to maven-core.org.apache.maven.project.ClasspathElements.getCompileClasspathElements():java.util.List" />
+        <entry description="Move maven-core.org.apache.maven.project.MavenProject.addArtifactPath(org.apache.maven.artifact.Artifact, java.util.List):void to maven-core.org.apache.maven.project.ClasspathElements.addArtifactPath(org.apache.maven.artifact.Artifact, java.util.List):void" />
+        <entry description="Move maven-core.org.apache.maven.project.MavenProject.getTestClasspathElements():java.util.List to maven-core.org.apache.maven.project.ClasspathElements.getTestClasspathElements():java.util.List" />
+      </refactorings>
+      <action type="add-extension-node" active="true" last-applied="true" description="Add ClasspathElements to maven-core.org.apache.maven.project">
+        <params name="ClasspathElements" module="false">
+          <parent-fqn fqn="maven-core.org.apache.maven.project" type="package">
+            <node name="maven-core" type="jar" />
+            <node name="org" type="package" />
+            <node name="apache" type="package" />
+            <node name="maven" type="package" />
+            <node name="project" type="package" />
+          </parent-fqn>
+        </params>
+      </action>
+      <action type="group-smart-move" active="true" last-applied="true" description="Move (5) items to maven-core.org.apache.maven.project.ClasspathElements">
+        <composite-set>
+          <action type="smart-move" active="true" last-applied="true" description="Move maven-core.org.apache.maven.project.MavenProject.getCompileClasspathElements to maven-core.org.apache.maven.project.ClasspathElements">
+            <composite-set>
+              <action type="move" active="true" last-applied="true" description="Move maven-core.org.apache.maven.project.MavenProject.getCompileClasspathElements():java.util.List to maven-core.org.apache.maven.project.ClasspathElements">
+                <params>
+                  <source-fqn fqn="maven-core.org.apache.maven.project.MavenProject.getCompileClasspathElements():java.util.List" type="method" path="maven-core.org.apache.maven.project.MavenProject">
+                    <node name="maven-core" type="jar" />
+                    <node name="org" type="package" />
+                    <node name="apache" type="package" />
+                    <node name="maven" type="package" />
+                    <node name="project" type="package" />
+                    <node name="MavenProject" type="class" />
+                    <node name="getCompileClasspathElements():java.util.List" type="method" />
+                  </source-fqn>
+                  <to-fqn fqn="maven-core.org.apache.maven.project.ClasspathElements" type="extension">
+                    <node name="maven-core" type="jar" />
+                    <node name="org" type="package" />
+                    <node name="apache" type="package" />
+                    <node name="maven" type="package" />
+                    <node name="project" type="package" />
+                    <node name="ClasspathElements" type="extension" />
+                  </to-fqn>
+                </params>
+              </action>
+            </composite-set>
+            <params>
+              <container-fqn fqn="maven-core.org.apache.maven.project.ClasspathElements" type="extension">
+                <node name="maven-core" type="jar" />
+                <node name="org" type="package" />
+                <node name="apache" type="package" />
+                <node name="maven" type="package" />
+                <node name="project" type="package" />
+                <node name="ClasspathElements" type="extension" />
+              </container-fqn>
+            </params>
+          </action>
+          <action type="smart-move" active="true" last-applied="true" description="Move maven-core.org.apache.maven.project.MavenProject.getRuntimeClasspathElements to maven-core.org.apache.maven.project.ClasspathElements">
+            <composite-set>
+              <action type="move" active="true" last-applied="true" description="Move maven-core.org.apache.maven.project.MavenProject.getRuntimeClasspathElements():java.util.List to maven-core.org.apache.maven.project.ClasspathElements">
+                <params>
+                  <source-fqn fqn="maven-core.org.apache.maven.project.MavenProject.getRuntimeClasspathElements():java.util.List" type="method" path="maven-core.org.apache.maven.project.MavenProject">
+                    <node name="maven-core" type="jar" />
+                    <node name="org" type="package" />
+                    <node name="apache" type="package" />
+                    <node name="maven" type="package" />
+                    <node name="project" type="package" />
+                    <node name="MavenProject" type="class" />
+                    <node name="getRuntimeClasspathElements():java.util.List" type="method" />
+                  </source-fqn>
+                  <to-fqn fqn="maven-core.org.apache.maven.project.ClasspathElements" type="extension">
+                    <node name="maven-core" type="jar" />
+                    <node name="org" type="package" />
+                    <node name="apache" type="package" />
+                    <node name="maven" type="package" />
+                    <node name="project" type="package" />
+                    <node name="ClasspathElements" type="extension" />
+                  </to-fqn>
+                </params>
+              </action>
+            </composite-set>
+            <params>
+              <container-fqn fqn="maven-core.org.apache.maven.project.ClasspathElements" type="extension">
+                <node name="maven-core" type="jar" />
+                <node name="org" type="package" />
+                <node name="apache" type="package" />
+                <node name="maven" type="package" />
+                <node name="project" type="package" />
+                <node name="ClasspathElements" type="extension" />
+              </container-fqn>
+            </params>
+          </action>
+          <action type="smart-move" active="true" last-applied="true" description="Move maven-core.org.apache.maven.project.MavenProject.getTestClasspathElements to maven-core.org.apache.maven.project.ClasspathElements">
+            <composite-set>
+              <action type="move" active="true" last-applied="true" description="Move maven-core.org.apache.maven.project.MavenProject.getTestClasspathElements():java.util.List to maven-core.org.apache.maven.project.ClasspathElements">
+                <params>
+                  <source-fqn fqn="maven-core.org.apache.maven.project.MavenProject.getTestClasspathElements():java.util.List" type="method" path="maven-core.org.apache.maven.project.MavenProject">
+                    <node name="maven-core" type="jar" />
+                    <node name="org" type="package" />
+                    <node name="apache" type="package" />
+                    <node name="maven" type="package" />
+                    <node name="project" type="package" />
+                    <node name="MavenProject" type="class" />
+                    <node name="getTestClasspathElements():java.util.List" type="method" />
+                  </source-fqn>
+                  <to-fqn fqn="maven-core.org.apache.maven.project.ClasspathElements" type="extension">
+                    <node name="maven-core" type="jar" />
+                    <node name="org" type="package" />
+                    <node name="apache" type="package" />
+                    <node name="maven" type="package" />
+                    <node name="project" type="package" />
+                    <node name="ClasspathElements" type="extension" />
+                  </to-fqn>
+                </params>
+              </action>
+            </composite-set>
+            <params>
+              <container-fqn fqn="maven-core.org.apache.maven.project.ClasspathElements" type="extension">
+                <node name="maven-core" type="jar" />
+                <node name="org" type="package" />
+                <node name="apache" type="package" />
+                <node name="maven" type="package" />
+                <node name="project" type="package" />
+                <node name="ClasspathElements" type="extension" />
+              </container-fqn>
+            </params>
+          </action>
+          <action type="smart-move" active="true" last-applied="true" description="Move maven-core.org.apache.maven.project.MavenProject.addArtifactPath to maven-core.org.apache.maven.project.ClasspathElements">
+            <composite-set>
+              <action type="move" active="true" last-applied="true" description="Move maven-core.org.apache.maven.project.MavenProject.addArtifactPath(org.apache.maven.artifact.Artifact, java.util.List):void to maven-core.org.apache.maven.project.ClasspathElements">
+                <params>
+                  <source-fqn fqn="maven-core.org.apache.maven.project.MavenProject.addArtifactPath(org.apache.maven.artifact.Artifact, java.util.List):void" type="method" path="maven-core.org.apache.maven.project.MavenProject">
+                    <node name="maven-core" type="jar" />
+                    <node name="org" type="package" />
+                    <node name="apache" type="package" />
+                    <node name="maven" type="package" />
+                    <node name="project" type="package" />
+                    <node name="MavenProject" type="class" />
+                    <node name="addArtifactPath(org.apache.maven.artifact.Artifact, java.util.List):void" type="method" />
+                  </source-fqn>
+                  <to-fqn fqn="maven-core.org.apache.maven.project.ClasspathElements" type="extension">
+                    <node name="maven-core" type="jar" />
+                    <node name="org" type="package" />
+                    <node name="apache" type="package" />
+                    <node name="maven" type="package" />
+                    <node name="project" type="package" />
+                    <node name="ClasspathElements" type="extension" />
+                  </to-fqn>
+                </params>
+              </action>
+            </composite-set>
+            <params>
+              <container-fqn fqn="maven-core.org.apache.maven.project.ClasspathElements" type="extension">
+                <node name="maven-core" type="jar" />
+                <node name="org" type="package" />
+                <node name="apache" type="package" />
+                <node name="maven" type="package" />
+                <node name="project" type="package" />
+                <node name="ClasspathElements" type="extension" />
+              </container-fqn>
+            </params>
+          </action>
+          <action type="smart-move" active="true" last-applied="true" description="Move maven-core.org.apache.maven.project.MavenProject.getSystemClasspathElements to maven-core.org.apache.maven.project.ClasspathElements">
+            <composite-set>
+              <action type="move" active="true" last-applied="true" description="Move maven-core.org.apache.maven.project.MavenProject.getSystemClasspathElements():java.util.List to maven-core.org.apache.maven.project.ClasspathElements">
+                <params>
+                  <source-fqn fqn="maven-core.org.apache.maven.project.MavenProject.getSystemClasspathElements():java.util.List" type="method" path="maven-core.org.apache.maven.project.MavenProject">
+                    <node name="maven-core" type="jar" />
+                    <node name="org" type="package" />
+                    <node name="apache" type="package" />
+                    <node name="maven" type="package" />
+                    <node name="project" type="package" />
+                    <node name="MavenProject" type="class" />
+                    <node name="getSystemClasspathElements():java.util.List" type="method" />
+                  </source-fqn>
+                  <to-fqn fqn="maven-core.org.apache.maven.project.ClasspathElements" type="extension">
+                    <node name="maven-core" type="jar" />
+                    <node name="org" type="package" />
+                    <node name="apache" type="package" />
+                    <node name="maven" type="package" />
+                    <node name="project" type="package" />
+                    <node name="ClasspathElements" type="extension" />
+                  </to-fqn>
+                </params>
+              </action>
+            </composite-set>
+            <params>
+              <container-fqn fqn="maven-core.org.apache.maven.project.ClasspathElements" type="extension">
+                <node name="maven-core" type="jar" />
+                <node name="org" type="package" />
+                <node name="apache" type="package" />
+                <node name="maven" type="package" />
+                <node name="project" type="package" />
+                <node name="ClasspathElements" type="extension" />
+              </container-fqn>
+            </params>
+          </action>
+        </composite-set>
+      </action>
+    </set>
+  </restructuring>
+  <grid-set sep="." version="5.0.14380" />
+  <physical-grid-set sep="." version="5.0.14380">
+    <grid name="Workspace spec" enforce="true" locked="false" strict="false">
+      <row>
+        <cell name="maven-compat" pattern="maven-compat.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+        <cell name="maven-embedder" pattern="maven-embedder.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+      </row>
+      <row>
+        <cell name="maven-core" pattern="maven-core.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+      </row>
+      <row>
+        <cell name="maven-resolver-provider" pattern="maven-resolver-provider.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+      </row>
+      <row>
+        <cell name="maven-model-builder" pattern="maven-model-builder.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+        <cell name="maven-plugin-api" pattern="maven-plugin-api.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+        <cell name="maven-settings-builder" pattern="maven-settings-builder.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+      </row>
+      <row>
+        <cell name="maven-artifact" pattern="maven-artifact.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+        <cell name="maven-builder-support" pattern="maven-builder-support.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+        <cell name="maven-model" pattern="maven-model.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+        <cell name="maven-repository-metadata" pattern="maven-repository-metadata.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+        <cell name="maven-settings" pattern="maven-settings.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+        <cell name="maven-slf4j-provider" pattern="maven-slf4j-provider.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+      </row>
+      <description>Top-level breakout</description>
+    </grid>
+  </physical-grid-set>
+</local-project>

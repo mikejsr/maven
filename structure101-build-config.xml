@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<headless version="1.0">
+    <operations>
+
+        <operation type="check-key-measures">
+            <argument name="output-file" value="const(THIS_FILE)/s101-results/key-measures.xml"/>
+            <argument name="output-file-for-snapshot" value="const(THIS_FILE)/s101-results/snapshot-key-measures.xml"/>
+            <argument name="fail-on-architecture-violations" value="false"/>
+            <argument name="fail-on-fat-package" value="false"/>
+            <argument name="fail-on-fat-class" value="false"/>
+            <argument name="fail-on-fat-method" value="false"/>
+            <argument name="fail-on-feedback-dependencies" value="false"/>
+            <argument name="fail-on-spec-violation-dependencies" value="false"/>
+            <argument name="fail-on-total-problem-dependencies" value="false"/>
+            <argument name="fail-on-spec-item-violations" value="false"/>
+            <argument name="fail-on-biggest-class-tangle" value="false"/>
+            <argument name="fail-on-tangled-package" value="false"/>
+            <argument name="fail-on-architecture-violations" value="false"/>
+            <argument name="identifier-on-violation" value="S101 key measure violation"/>
+        </operation>
+        
+        // check for structure spec violations
+        <operation type="check-spec">
+            <argument name="output-file" value="const(THIS_FILE)/s101-results/spec-violations.csv"/>
+            <argument name="output-dir" value="const(THIS_FILE)/s101-results"/>
+            <argument name="onlyNew" value="false"/>
+            <argument name="check-unassociated" value="true"/>
+            <argument name="fail-on-violations" value="false"/>
+            <argument name="identifier-on-violation" value="build unstable"/>
+        </operation>
+
+        // check for xs fat and tangles
+        <operation type="check-xs">
+            <argument name="output-file" value="const(THIS_FILE)/s101-results/xs-offenders.xml"/>
+            <argument name="output-dir" value="const(THIS_FILE)/s101-results"/>
+            <argument name="fail-on-violations" value="false"/>
+            <argument name="fail-on-offenders" value="false"/>
+            <argument name="identifier-on-violation" value="build unstable"/>
+        </operation>
+
+        // if no exceptions then publish ("fail-on-violations" in the above operations must be true for an exception to be throw)
+        <operation type="publish">
+            <argument name="label" value="5.0.0"/>
+            <argument name="diagrams" value="true"/>
+            <argument name="spec" value="true"/>
+        </operation>
+
+        // once published: -
+        // check actions to show those that can't be applied - ie they are already applied or other changes have made them obsolete
+        <operation type="check-actions">
+            <argument name="output-dir" value="const(THIS_FILE)/s101-results"/>
+        </operation>
+
+        // record metrics for the snapshot/project
+        <operation type="report-metrics">
+            <argument name="output-file" value="const(THIS_FILE)/s101-results/report-metrics.xml"/>
+        </operation>
+
+        // record summary for the snapshot/project
+        <operation type="report-summary">
+            <argument name="output-dir" value="const(THIS_FILE)/s101-results"/>
+            <argument name="xml" value="true"/>
+            <argument name="notips" value="true"/>
+            <argument name="overwrite" value="true"/>
+            <argument name="name" value="EcommerceOFbiz"/>
+        </operation>
+    </operations>
+
+    <arguments>
+        <argument name="local-project" value="const(THIS_FILE)/structure101-settings.java.hsp">
+        </argument>
+        <argument name="repository" value="c:/structure101-repository"/>
+        <argument name="project" value="maven"/>
+    </arguments>
+</headless>
