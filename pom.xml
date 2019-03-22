@@ -75,6 +75,11 @@ under the License.
     <maven.site.path>ref/3-LATEST</maven.site.path>
     <checkstyle.violation.ignore>None</checkstyle.violation.ignore>
     <checkstyle.excludes>**/package-info.java</checkstyle.excludes>
+
+    <sonar.host.url>http://localhost:9000</sonar.host.url>
+    <sonar.login>admin</sonar.login>
+    <sonar.password>admin</sonar.password>
+    <structure101.java.headless.config>/structure101-build-config.xml</structure101.java.headless.config>
   </properties>
 
   <modules>
