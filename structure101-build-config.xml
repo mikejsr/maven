@@ -3,8 +3,8 @@
     <operations>
 
         <operation type="check-key-measures">
-            <argument name="output-file" value="const(THIS_FILE)/s101-results/key-measures.xml"/>
-            <argument name="output-file-for-snapshot" value="const(THIS_FILE)/s101-results/snapshot-key-measures.xml"/>
+            <argument name="output-file" value="const(THIS_FILE)/s101working/structure101report/key-measures.xml"/>
+            <argument name="output-file-for-snapshot" value="const(THIS_FILE)/s101working/structure101report/snapshot-key-measures.xml"/>
             <argument name="fail-on-architecture-violations" value="false"/>
             <argument name="fail-on-fat-package" value="false"/>
             <argument name="fail-on-fat-class" value="false"/>
@@ -21,8 +21,8 @@
         
         // check for structure spec violations
         <operation type="check-spec">
-            <argument name="output-file" value="const(THIS_FILE)/s101-results/spec-violations.csv"/>
-            <argument name="output-dir" value="const(THIS_FILE)/s101-results"/>
+            <argument name="output-file" value="const(THIS_FILE)/s101working/structure101report/spec-violations.csv"/>
+            <argument name="output-dir" value="const(THIS_FILE)/s101working/structure101report"/>
             <argument name="onlyNew" value="false"/>
             <argument name="check-unassociated" value="true"/>
             <argument name="fail-on-violations" value="false"/>
@@ -31,8 +31,8 @@
 
         // check for xs fat and tangles
         <operation type="check-xs">
-            <argument name="output-file" value="const(THIS_FILE)/s101-results/xs-offenders.xml"/>
-            <argument name="output-dir" value="const(THIS_FILE)/s101-results"/>
+            <argument name="output-file" value="const(THIS_FILE)/s101working/structure101report/xs-offenders.xml"/>
+            <argument name="output-dir" value="const(THIS_FILE)/s101working/structure101report"/>
             <argument name="fail-on-violations" value="false"/>
             <argument name="fail-on-offenders" value="false"/>
             <argument name="identifier-on-violation" value="build unstable"/>
@@ -48,17 +48,17 @@
         // once published: -
         // check actions to show those that can't be applied - ie they are already applied or other changes have made them obsolete
         <operation type="check-actions">
-            <argument name="output-dir" value="const(THIS_FILE)/s101-results"/>
+            <argument name="output-dir" value="const(THIS_FILE)/s101working/structure101report"/>
         </operation>
 
         // record metrics for the snapshot/project
         <operation type="report-metrics">
-            <argument name="output-file" value="const(THIS_FILE)/s101-results/report-metrics.xml"/>
+            <argument name="output-file" value="const(THIS_FILE)/s101working/structure101report/report-metrics.xml"/>
         </operation>
 
         // record summary for the snapshot/project
         <operation type="report-summary">
-            <argument name="output-dir" value="const(THIS_FILE)/s101-results"/>
+            <argument name="output-dir" value="const(THIS_FILE)/s101working/structure101report"/>
             <argument name="xml" value="true"/>
             <argument name="notips" value="true"/>
             <argument name="overwrite" value="true"/>
