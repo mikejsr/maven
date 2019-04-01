@@ -33,6 +33,10 @@ under the License.
   <name>Maven Compat</name>
   <description>Maven2 classes maintained as compatibility layer.</description>
 
+  <properties>
+    <structure101.java.disabled>true</structure101.java.disabled>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>org.apache.maven</groupId>

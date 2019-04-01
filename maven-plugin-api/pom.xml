@@ -33,6 +33,10 @@ under the License.
   <name>Maven Plugin API</name>
   <description>The API for plugins - Mojos - development.</description>
 
+  <properties>
+    <structure101.java.disabled>true</structure101.java.disabled>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>org.apache.maven</groupId>

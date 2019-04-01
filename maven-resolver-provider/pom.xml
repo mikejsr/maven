@@ -33,6 +33,10 @@ under the License.
   <name>Maven Artifact Resolver Provider</name>
   <description>Extensions to Maven Resolver for utilizing Maven POM and repository metadata.</description>
 
+  <properties>
+    <structure101.java.disabled>true</structure101.java.disabled>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>org.apache.maven</groupId>

@@ -36,6 +36,10 @@ under the License.
     for levels and stacktraces rendering.
   </description>
 
+  <properties>
+    <structure101.java.disabled>true</structure101.java.disabled>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>org.slf4j</groupId>
