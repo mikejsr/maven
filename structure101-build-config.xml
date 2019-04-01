@@ -3,7 +3,7 @@
     <operations>
 
         <operation type="check-key-measures">
-            <argument name="output-file" value="const(THIS_FILE)/s101working/structure101report/key-measures.xml"/>
+            <argument name="output-file" value="const(THIS_FILE)/s101working/structure101report/key-measure.xml"/>
             <argument name="output-file-for-snapshot" value="const(THIS_FILE)/s101working/structure101report/snapshot-key-measures.xml"/>
             <argument name="fail-on-architecture-violations" value="false"/>
             <argument name="fail-on-fat-package" value="false"/>
