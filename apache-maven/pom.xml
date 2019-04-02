@@ -36,7 +36,6 @@ under the License.
 
   <properties>
     <distributionFileName>${distributionId}-${project.version}</distributionFileName>
-    <structure101.java.disabled>true</structure101.java.disabled>
   </properties>
 
   <dependencies>

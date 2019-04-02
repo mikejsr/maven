@@ -32,10 +32,6 @@ under the License.
 
   <name>Maven Artifact</name>
 
-  <properties>
-    <structure101.java.disabled>true</structure101.java.disabled>
-  </properties>
-
   <dependencies>
     <dependency>
       <groupId>org.codehaus.plexus</groupId>

@@ -33,10 +33,6 @@ under the License.
   <name>Maven Core</name>
   <description>Maven Core classes.</description>
 
-  <properties>
-    <structure101.java.disabled>true</structure101.java.disabled>
-  </properties>
-
   <dependencies>
     <!--  Maven -->
     <dependency>

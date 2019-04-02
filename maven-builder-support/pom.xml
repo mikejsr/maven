@@ -33,8 +33,4 @@ under the License.
   <name>Maven Builder Support</name>
   <description>Support for descriptor builders (model, setting, toolchains)</description>
 
-  <properties>
-    <structure101.java.disabled>true</structure101.java.disabled>
-  </properties>
-
 </project>

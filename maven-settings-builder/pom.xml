@@ -39,10 +39,6 @@ under the License.
     </contributor>
   </contributors>
 
-  <properties>
-    <structure101.java.disabled>true</structure101.java.disabled>
-  </properties>
-
   <dependencies>
     <dependency>
       <groupId>org.apache.maven</groupId>

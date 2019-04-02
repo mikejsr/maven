@@ -33,10 +33,6 @@ under the License.
   <name>Maven Embedder</name>
   <description>Maven embeddable component, with CLI and logging support.</description>
 
-  <properties>
-    <structure101.java.disabled>true</structure101.java.disabled>
-  </properties>
-
   <dependencies>
     <dependency>
       <groupId>org.apache.maven</groupId>

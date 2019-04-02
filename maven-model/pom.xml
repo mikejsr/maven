@@ -35,9 +35,7 @@ under the License.
 
   <properties>
     <checkstyle.violation.ignore>FileLength</checkstyle.violation.ignore>
-    <structure101.java.disabled>true</structure101.java.disabled>
   </properties>
-
 
   <dependencies>
     <dependency>

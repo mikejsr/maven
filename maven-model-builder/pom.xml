@@ -33,10 +33,6 @@ under the License.
   <name>Maven Model Builder</name>
   <description>The effective model builder, with inheritance, profile activation, interpolation, ...</description>
 
-  <properties>
-    <structure101.java.disabled>true</structure101.java.disabled>
-  </properties>
-
   <dependencies>
     <dependency>
       <groupId>org.codehaus.plexus</groupId>
