@@ -76,7 +76,7 @@ under the License.
     <checkstyle.violation.ignore>None</checkstyle.violation.ignore>
     <checkstyle.excludes>**/package-info.java</checkstyle.excludes>
 
-    <sonar.host.url>http://localhost:9000</sonar.host.url>
+    <sonar.host.url>http://192.168.1.215:9000</sonar.host.url>
     <sonar.login>admin</sonar.login>
     <sonar.password>admin</sonar.password>
     <!--<structure101.java.headless.config>structure101-build-config.xml</structure101.java.headless.config>-->
