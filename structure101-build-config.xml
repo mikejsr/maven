@@ -69,7 +69,7 @@
     <arguments>
         <argument name="local-project" value="const(THIS_FILE)/structure101-settings.java.hsp">
         </argument>
-        <argument name="repository" value="c:/structure101-repository"/>
+        <argument name="repository" value="http://minipc:8089/s101j/data"/>
         <argument name="project" value="maven"/>
     </arguments>
 </headless>
