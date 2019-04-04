@@ -16,19 +16,19 @@
   <property name="project-excluded" />
   <property name="show-needs-to-compile" value="false" />
   <classpath>
-    <classpathentry kind="lib" path="maven-builder-support/target/classes" module="maven-builder-support" />
+    <classpathentry kind="lib" path="maven-plugin-api/target/classes" module="maven-plugin-api" />
+    <classpathentry kind="lib" path="maven-model/target/classes" module="maven-model" />
     <classpathentry kind="lib" path="maven-resolver-provider/target/classes" module="maven-resolver-provider" />
+    <classpathentry kind="lib" path="maven-slf4j-provider/target/classes" module="maven-slf4j-provider" />
+    <classpathentry kind="lib" path="maven-settings-builder/target/classes" module="maven-settings-builder" />
+    <classpathentry kind="lib" path="maven-settings/target/classes" module="maven-settings" />
+    <classpathentry kind="lib" path="maven-compat/target/classes" module="maven-compat" />
     <classpathentry kind="lib" path="maven-model-builder/target/classes" module="maven-model-builder" />
     <classpathentry kind="lib" path="maven-core/target/classes" module="maven-core" />
-    <classpathentry kind="lib" path="maven-slf4j-provider/target/classes" module="maven-slf4j-provider" />
-    <classpathentry kind="lib" path="maven-model/target/classes" module="maven-model" />
     <classpathentry kind="lib" path="maven-repository-metadata/target/classes" module="maven-repository-metadata" />
-    <classpathentry kind="lib" path="maven-compat/target/classes" module="maven-compat" />
-    <classpathentry kind="lib" path="maven-plugin-api/target/classes" module="maven-plugin-api" />
-    <classpathentry kind="lib" path="maven-embedder/target/classes" module="maven-embedder" />
-    <classpathentry kind="lib" path="maven-settings/target/classes" module="maven-settings" />
-    <classpathentry kind="lib" path="maven-settings-builder/target/classes" module="maven-settings-builder" />
     <classpathentry kind="lib" path="maven-artifact/target/classes" module="maven-artifact" />
+    <classpathentry kind="lib" path="maven-embedder/target/classes" module="maven-embedder" />
+    <classpathentry kind="lib" path="maven-builder-support/target/classes" module="maven-builder-support" />
   </classpath>
   <pom-root-files />
   <modules>
@@ -111,6 +111,9 @@
     </module>
   </modules>
   <modules-in-scope />
+  <excludes>
+    <exclude expression="maven-model.*" active="true" />
+  </excludes>
   <restructuring>
     <set version="3" name="Class split example" hiview="Codemap" active="true" todo="true" list="0">
       <refactorings>
@@ -314,35 +317,4 @@
     </set>
   </restructuring>
   <grid-set sep="." version="5.0.14358" />
-  <physical-grid-set sep="." version="5.0.14358">
-    <grid name="Workspace spec" enforce="true" locked="false" strict="false">
-      <row>
-        <cell name="maven-compat" pattern="maven-compat.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
-        <cell name="maven-embedder" pattern="maven-embedder.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
-      </row>
-      <row>
-        <cell name="maven-core" pattern="maven-core.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
-      </row>
-      <row>
-        <cell name="maven-resolver-provider" pattern="maven-resolver-provider.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
-      </row>
-      <row>
-        <cell name="maven-model-builder" pattern="maven-model-builder.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
-        <cell name="maven-plugin-api" pattern="maven-plugin-api.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
-        <cell name="maven-settings-builder" pattern="maven-settings-builder.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
-      </row>
-      <row>
-        <cell name="maven-artifact" pattern="maven-artifact.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
-        <cell name="maven-builder-support" pattern="maven-builder-support.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
-        <cell name="maven-model" pattern="maven-model.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
-        <cell name="maven-repository-metadata" pattern="maven-repository-metadata.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
-        <cell name="maven-settings" pattern="maven-settings.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
-        <cell name="maven-slf4j-provider" pattern="maven-slf4j-provider.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
-      </row>
-      <row>
-        <cell name="org" pattern="org.*" vexpanded="false" illegal="true" visibility="public" drill="true" />
-      </row>
-      <description>Top-level breakout</description>
-    </grid>
-  </physical-grid-set>
 </local-project>

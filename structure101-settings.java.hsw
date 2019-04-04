@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<local-project language="java" associate="file:c:/structure101-repository/maven" version="5.0.14384" xml-version="3" flavor="j2se">
+<local-project language="java" version="5.0.14385" xml-version="3" flavor="j2se">
   <property name="publish-architecture-artifacts" value="true" />
   <property name="force-classpath" value="false" />
   <property name="project-type" value="classpath" />
@@ -16,19 +16,19 @@
   <property name="show-needs-to-compile" value="false" />
   <property name="physical-layering-system-file" value="structure101-spec.xml" />
   <classpath>
-    <classpathentry kind="lib" path="maven-builder-support/target/classes" module="maven-builder-support" />
+    <classpathentry kind="lib" path="maven-plugin-api/target/classes" module="maven-plugin-api" />
+    <classpathentry kind="lib" path="maven-model/target/classes" module="maven-model" />
     <classpathentry kind="lib" path="maven-resolver-provider/target/classes" module="maven-resolver-provider" />
+    <classpathentry kind="lib" path="maven-slf4j-provider/target/classes" module="maven-slf4j-provider" />
+    <classpathentry kind="lib" path="maven-settings-builder/target/classes" module="maven-settings-builder" />
+    <classpathentry kind="lib" path="maven-settings/target/classes" module="maven-settings" />
+    <classpathentry kind="lib" path="maven-compat/target/classes" module="maven-compat" />
     <classpathentry kind="lib" path="maven-model-builder/target/classes" module="maven-model-builder" />
     <classpathentry kind="lib" path="maven-core/target/classes" module="maven-core" />
-    <classpathentry kind="lib" path="maven-slf4j-provider/target/classes" module="maven-slf4j-provider" />
-    <classpathentry kind="lib" path="maven-model/target/classes" module="maven-model" />
     <classpathentry kind="lib" path="maven-repository-metadata/target/classes" module="maven-repository-metadata" />
-    <classpathentry kind="lib" path="maven-compat/target/classes" module="maven-compat" />
-    <classpathentry kind="lib" path="maven-plugin-api/target/classes" module="maven-plugin-api" />
-    <classpathentry kind="lib" path="maven-embedder/target/classes" module="maven-embedder" />
-    <classpathentry kind="lib" path="maven-settings/target/classes" module="maven-settings" />
-    <classpathentry kind="lib" path="maven-settings-builder/target/classes" module="maven-settings-builder" />
     <classpathentry kind="lib" path="maven-artifact/target/classes" module="maven-artifact" />
+    <classpathentry kind="lib" path="maven-embedder/target/classes" module="maven-embedder" />
+    <classpathentry kind="lib" path="maven-builder-support/target/classes" module="maven-builder-support" />
   </classpath>
   <pom-root-files />
   <modules>
@@ -111,24 +111,26 @@
     </module>
   </modules>
   <modules-in-scope>
-    <module name="maven-builder-support" />
     <module name="maven-slf4j-provider" />
     <module name="maven-settings" />
+    <module name="maven-builder-support" />
     <module name="maven-settings-builder" />
-    <module name="maven-artifact" />
-    <module name="maven-repository-metadata" />
     <module name="maven-model" />
-    <module name="maven-plugin-api" />
+    <module name="maven-repository-metadata" />
+    <module name="maven-artifact" />
     <module name="maven-model-builder" />
     <module name="maven-resolver-provider" />
+    <module name="maven-plugin-api" />
     <module name="maven-core" />
-    <module name="maven-compat" />
     <module name="maven-embedder" />
+    <module name="maven-compat" />
     <module name="apache-maven" />
     <module name="maven" />
   </modules-in-scope>
   <excludes>
     <exclude expression="*.*&amp;amp;*" active="true" />
+    <exclude expression="maven-model.*" active="true" />
+    <exclude expression="!maven-model.org.apache.maven.model.ModelMerger" active="false" />
   </excludes>
-  <grid-set sep="." version="5.0.14384" />
+  <grid-set sep="." version="5.0.14385" />
 </local-project>
