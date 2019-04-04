@@ -5,6 +5,7 @@
         <operation type="check-key-measures">
             <argument name="output-file" value="const(THIS_FILE)/s101working/structure101report/keymeasure.xml"/>
             <argument name="output-file-for-snapshot" value="const(THIS_FILE)/s101working/structure101report/snapshot-key-measures.xml"/>
+            <!-- argument name="baseline" value=""/-->
             <argument name="fail-on-architecture-violations" value="false"/>
             <argument name="fail-on-fat-package" value="false"/>
             <argument name="fail-on-fat-class" value="false"/>
@@ -40,9 +41,10 @@
 
         // if no exceptions then publish ("fail-on-violations" in the above operations must be true for an exception to be throw)
         <operation type="publish">
-            <argument name="label" value="5.0.0"/>
+            <argument name="label" value="LABEL_TOKEN"/>
             <argument name="diagrams" value="true"/>
             <argument name="spec" value="true"/>
+            <argument name="actions" value="true"/>
         </operation>
 
         // once published: -
