@@ -3,7 +3,7 @@
     <operations>
 
         <operation type="check-key-measures">
-            <argument name="output-file" value="const(THIS_FILE)/key-measures.xml"/>
+            <argument name="output-file" value="const(THIS_FILE)/target/structure101/key-measures.xml"/>
             <argument name="output-file-for-snapshot" value="const(THIS_FILE)/s101working/structure101report/snapshot-key-measures.xml"/>
             <!-- argument name="baseline" value="LABEL_TOKEN"/ -->
             <argument name="fail-on-architecture-violations" value="false"/>
