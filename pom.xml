@@ -79,7 +79,7 @@ under the License.
     <sonar.host.url>http://ciserver:9000</sonar.host.url>
     <sonar.login>admin</sonar.login>
     <sonar.password>admin</sonar.password>
-    <sonar.projectName>Maven Test</sonar.projectName>    
+    <!-- sonar.projectName>Maven Test</sonar.projectName -->
     <!--<structure101.java.headless.config>structure101-build-config.xml</structure101.java.headless.config>-->
 
   </properties>
