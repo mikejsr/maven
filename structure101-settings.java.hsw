@@ -112,25 +112,27 @@
   </modules>
   <modules-in-scope>
     <module name="maven-slf4j-provider" />
-    <module name="maven-settings" />
-    <module name="maven-builder-support" />
-    <module name="maven-settings-builder" />
-    <module name="maven-model" />
     <module name="maven-repository-metadata" />
+    <module name="maven-settings" />
+    <module name="maven" />
     <module name="maven-artifact" />
+    <module name="maven-model" />
+    <module name="maven-plugin-api" />
+    <module name="maven-builder-support" />
     <module name="maven-model-builder" />
     <module name="maven-resolver-provider" />
-    <module name="maven-plugin-api" />
+    <module name="maven-settings-builder" />
     <module name="maven-core" />
     <module name="maven-embedder" />
     <module name="maven-compat" />
     <module name="apache-maven" />
-    <module name="maven" />
   </modules-in-scope>
   <excludes>
     <exclude expression="*.*&amp;amp;*" active="true" />
     <exclude expression="maven-model.*" active="true" />
     <exclude expression="!maven-model.org.apache.maven.model.ModelMerger" active="false" />
+    <exclude expression="maven-settings.*" active="true" />
+    <exclude expression="maven-repository-metadata.*" active="true" />
   </excludes>
   <grid-set sep="." version="5.0.14385" />
 </local-project>
