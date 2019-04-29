@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<local-project language="java" version="5.0.14385" xml-version="3" flavor="j2se">
+<local-project language="java" version="9.9.9" xml-version="3" flavor="j2se">
   <property name="publish-architecture-artifacts" value="true" />
   <property name="force-classpath" value="false" />
   <property name="project-type" value="classpath" />
@@ -111,21 +111,21 @@
     </module>
   </modules>
   <modules-in-scope>
-    <module name="maven-slf4j-provider" />
     <module name="maven-repository-metadata" />
-    <module name="maven-settings" />
-    <module name="maven" />
-    <module name="maven-artifact" />
-    <module name="maven-model" />
-    <module name="maven-plugin-api" />
     <module name="maven-builder-support" />
+    <module name="maven-model" />
+    <module name="maven-slf4j-provider" />
+    <module name="maven-settings" />
+    <module name="maven-settings-builder" />
+    <module name="maven-artifact" />
+    <module name="maven-plugin-api" />
     <module name="maven-model-builder" />
     <module name="maven-resolver-provider" />
-    <module name="maven-settings-builder" />
     <module name="maven-core" />
     <module name="maven-embedder" />
     <module name="maven-compat" />
     <module name="apache-maven" />
+    <module name="maven" />
   </modules-in-scope>
   <excludes>
     <exclude expression="*.*&amp;amp;*" active="true" />
@@ -134,5 +134,5 @@
     <exclude expression="maven-settings.*" active="true" />
     <exclude expression="maven-repository-metadata.*" active="true" />
   </excludes>
-  <grid-set sep="." version="5.0.14385" />
+  <grid-set sep="." version="9.9.9" />
 </local-project>

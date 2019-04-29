@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<local-project language="java" associate="http://ubuntu-server:8989/s101j/data/maven" version="5.0.14358" xml-version="3" flavor="j2se">
+<local-project language="java" associate="http://ubuntu-server:8989/s101j/data/Maven" version="5.0.14474" xml-version="3" flavor="j2se">
   <property name="show-as-module" value="false" />
   <property name="publish-architecture-artifacts" value="true" />
   <property name="force-classpath" value="false" />
@@ -117,7 +117,15 @@
     <exclude expression="maven-repository-metadata.*" active="true" />
   </excludes>
   <restructuring>
-    <set version="3" name="Class split example" hiview="Codemap" active="true" todo="false" list="0">
+    <set version="3" name="Class split example" hiview="Codemap" active="true" todo="true" list="0">
+      <refactorings>
+        <entry description="Add maven-core.org.apache.maven.project.ClasspathElements" />
+        <entry description="Move maven-core.org.apache.maven.project.MavenProject.getRuntimeClasspathElements():java.util.List to maven-core.org.apache.maven.project.ClasspathElements.getRuntimeClasspathElements():java.util.List" />
+        <entry description="Move maven-core.org.apache.maven.project.MavenProject.getSystemClasspathElements():java.util.List to maven-core.org.apache.maven.project.ClasspathElements.getSystemClasspathElements():java.util.List" />
+        <entry description="Move maven-core.org.apache.maven.project.MavenProject.getCompileClasspathElements():java.util.List to maven-core.org.apache.maven.project.ClasspathElements.getCompileClasspathElements():java.util.List" />
+        <entry description="Move maven-core.org.apache.maven.project.MavenProject.addArtifactPath(org.apache.maven.artifact.Artifact, java.util.List):void to maven-core.org.apache.maven.project.ClasspathElements.addArtifactPath(org.apache.maven.artifact.Artifact, java.util.List):void" />
+        <entry description="Move maven-core.org.apache.maven.project.MavenProject.getTestClasspathElements():java.util.List to maven-core.org.apache.maven.project.ClasspathElements.getTestClasspathElements():java.util.List" />
+      </refactorings>
       <action type="add-extension-node" active="true" last-applied="true" description="Add ClasspathElements to maven-core.org.apache.maven.project">
         <params name="ClasspathElements" module="false">
           <parent-fqn fqn="maven-core.org.apache.maven.project" type="package">
@@ -311,8 +319,80 @@
     </set>
     <set version="3" name="Action list 2" hiview="Codemap" active="false" todo="false" list="0" />
   </restructuring>
-  <grid-set sep="." version="5.0.14358" />
-  <physical-grid-set sep="." version="5.0.14358">
+  <grid-set sep="." version="5.0.14474">
+    <grid name="Diagram 1" enforce="true" locked="false" strict="false">
+      <row>
+        <cell name="maven-compat" pattern="maven-compat.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+        <cell name="maven-embedder" pattern="maven-embedder.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+      </row>
+      <row>
+        <cell name="maven-core" pattern="maven-core.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+      </row>
+      <row>
+        <cell name="maven-resolver-provider" pattern="maven-resolver-provider.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+      </row>
+      <row>
+        <cell name="maven-artifact" pattern="maven-artifact.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+      </row>
+      <row>
+        <cell name="maven-model-builder" pattern="maven-model-builder.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+        <cell name="maven-plugin-api" pattern="maven-plugin-api.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+        <cell name="maven-settings-builder" pattern="maven-settings-builder.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+      </row>
+      <row>
+        <cell name="maven-builder-support" pattern="maven-builder-support.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+        <cell name="maven-slf4j-provider" pattern="maven-slf4j-provider.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+      </row>
+      <description>Top-level breakout</description>
+    </grid>
+    <grid name="Diagram 2" enforce="true" locked="false" strict="false">
+      <row>
+        <cell name="maven-compat" pattern="maven-compat.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+        <cell name="maven-embedder" pattern="maven-embedder.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+      </row>
+      <row>
+        <cell name="maven-core" pattern="maven-core.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+      </row>
+      <row>
+        <cell name="maven-resolver-provider" pattern="maven-resolver-provider.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+      </row>
+      <row>
+        <cell name="maven-model-builder" pattern="maven-model-builder.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+        <cell name="maven-plugin-api" pattern="maven-plugin-api.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+        <cell name="maven-settings-builder" pattern="maven-settings-builder.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+      </row>
+      <row>
+        <cell name="maven-artifact" pattern="maven-artifact.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+        <cell name="maven-builder-support" pattern="maven-builder-support.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+        <cell name="maven-slf4j-provider" pattern="maven-slf4j-provider.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+      </row>
+      <description>Top-level breakout</description>
+    </grid>
+    <grid name="Diagram 3" enforce="true" locked="false" strict="false">
+      <row>
+        <cell name="maven-compat" pattern="maven-compat.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+        <cell name="maven-embedder" pattern="maven-embedder.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+      </row>
+      <row>
+        <cell name="maven-core" pattern="maven-core.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+      </row>
+      <row>
+        <cell name="maven-resolver-provider" pattern="maven-resolver-provider.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+      </row>
+      <row>
+        <cell name="maven-model-builder" pattern="maven-model-builder.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+        <cell name="maven-plugin-api" pattern="maven-plugin-api.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+        <cell name="maven-settings-builder" pattern="maven-settings-builder.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+      </row>
+      <row>
+        <cell name="maven-artifact" pattern="maven-artifact.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+        <cell name="maven-builder-support" pattern="maven-builder-support.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+        <cell name="maven-slf4j-provider" pattern="maven-slf4j-provider.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
+      </row>
+      <description>Top-level breakout</description>
+    </grid>
+  </grid-set>
+  <physical-grid-set sep="." version="5.0.14474">
     <grid name="Workspace spec" enforce="true" locked="false" strict="false">
       <row>
         <cell name="maven-compat" pattern="maven-compat.*" vexpanded="false" illegal="false" visibility="public" drill="true" />
