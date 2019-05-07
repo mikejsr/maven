@@ -81,6 +81,32 @@ under the License.
     <sonar.password>Caviar76</sonar.password>
 
   </properties>
+
+  <pluginRepositories>
+    <pluginRepository>
+      <id>structure101plugin</id>
+      <layout>default</layout>
+      <url>https://repository.structure101.com</url>
+      <releases>
+        <checksumPolicy>warn</checksumPolicy>
+        <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+    </pluginRepository>
+  </pluginRepositories>
+  <repositories>
+    <repository>
+      <id>structure101</id>
+      <url>https://repository.structure101.com</url>
+      <releases>
+        <checksumPolicy>warn</checksumPolicy>
+        <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+    </repository>
+  </repositories>
+
+
   <modules>
     <module>maven-plugin-api</module>
     <module>maven-builder-support</module>
@@ -605,6 +631,41 @@ under the License.
             <exclude>README.md</exclude>
           </excludes>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.structure101.java</groupId>
+        <artifactId>maven-structure101-plugin</artifactId>
+        <version>14443</version>
+        <configuration>
+          <project>Maven</project>
+          <localProject>structure101-settings.java.hsp</localProject>
+          <repository>http://ubuntu-server:8989/s101j/data</repository>
+        </configuration>
+        <executions>
+          <execution>
+            <id>S101reportkeymeasures</id>
+            <phase>post-integration-test</phase>
+            <goals>
+              <goal>report-key-measures</goal>
+            </goals>
+            <configuration>
+              <report-key-measures-output-file>target/structure101-reports/key-measures-report.xml</report-key-measures-output-file>
+            </configuration>
+          </execution>
+          <execution>
+            <id>S101publish</id>
+            <phase>post-integration-test</phase>
+            <goals>
+              <goal>publish</goal>
+            </goals>
+            <configuration>
+              <label>mvn-1</label>
+              <diagrams>true</diagrams>
+              <spec>true</spec>
+              <actions>true</actions>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
